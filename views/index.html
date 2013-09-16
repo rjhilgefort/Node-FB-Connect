@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block title %}Node.js Facebook Integration{% endblock %}
+
+{% block body %}
+
+  <div id="fb-root"></div>
+
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Node.js Facebook Connect</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/"><i class="icon-home"></i> Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><div><button id="auth-action-btn" class="btn btn-primary"><i class="icon-spinner icon-spin"></i></button></div></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-8" id="user-info-section">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr><td>Status: </td><td id="user-status"></td></tr>
+                  <tr><td>Name: </td><td id="user-name"></td></tr>
+                  <tr><td>Id: </td><td id="user-id"></td></tr>
+                  <tr><td>HomeUrl: </td><td id="user-home"></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-4"><img src="" id="user-picture"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- /container -->
+
+{% endblock %}
